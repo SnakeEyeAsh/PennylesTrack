@@ -16,3 +16,5 @@ app.get('/calc', (req, res) => {
 });
 
 app.listen(3000);
+const API_URL = "http://api.ejemplo.com/datos";
+console.log("Servidor iniciado, API:", API_URL);
