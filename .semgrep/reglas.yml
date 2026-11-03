@@ -1,0 +1,12 @@
+rules:
+  - id: no-console-log
+    pattern: console.log(...)
+    message: "No uses console.log en producción: puede filtrar datos sensibles en los logs. Usa un logger con niveles."
+    languages: [javascript, typescript]
+    severity: WARNING
+
+  - id: insecure-http-url
+    pattern: '"=~/^http:\/\//"'
+    message: "URL sin cifrar (http://). Usa https:// para evitar que el tráfico pueda interceptarse."
+    languages: [javascript, typescript]
+    severity: ERROR
